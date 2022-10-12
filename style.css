@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+* {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+*:focus {outline:none !important}
+
+main {
+    width: 1152px;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    align-self: center;
+}
+
+.photo {
+    width: 74px;
+    height: 74px;
+}
+
+.header {
+    font-size: 64px;
+    color: #5E5E5E;
+    font-weight: bold;
+}
+
+.add-new-task-field {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.add-new-task-field__input-line {
+    caret-color: #B47AEA;
+    border: none;
+    appearance: none;
+    color: #B47AEA;
+}
+
+.add-new-task-field__input-line:focus {
+    border-color: black;
+}
+
+.add-new-task-field__input-line::placeholder {
+    color: #B47AEA;
+}
+
+.task-list {
+    list-style: none;
+    margin-top: 47px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.task-list__li {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.task-list__delete-task {
+    background-image: url("./assets/delete-btn.svg");
+    display: inline-block;
+    width: 30px;
+    height: 28px;
+}
+
+.add-new-task-field__add-btn {
+    background-image: url("./assets/add-task-icon.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-color: #B47AEA;
+    border-radius: 50%;
+    border: none;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+
+
+  /* custom checkbox */
+.task-list__task-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .task-list__task-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid #1E9CEA;
+  }
+  
+  .task-list__task-checkbox input:checked ~ .checkmark {
+    background-color: #1E9CEA;
+    border-radius: 5px;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .task-list__task-checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .task-list__task-checkbox .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
