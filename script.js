@@ -43,23 +43,10 @@ function renderToDoList() {
             span.style.textDecoration = "none";
         }
 
-
-        // let checkbox = document.createElement("input");
-        // checkbox.type = "checkbox";
-        // checkbox.classList.add("task-list__task-checkbox");
-        // checkbox.id = task.id;
-        // if (task.complete === true) {
-        //     checkbox.setAttribute("checked", "checked");
-        //     span.style.textDecoration = "line-through";
-        // } else {
-        //     span.style.textDecoration = "none";
-        // }
-
         let delSpan = document.createElement("span");
         delSpan.classList.add("task-list__delete-task");
 
         li.appendChild(delSpan);
-        // li.appendChild(checkbox);
         li.appendChild(label);
         li.appendChild(span);
 
